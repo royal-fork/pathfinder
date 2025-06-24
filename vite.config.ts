@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/heloo/", // ✅ updated for GitHub Pages with repository name "heloo"
+  base: "/pathfinder/", // ✅ updated for GitHub Pages with repository name "pathfinder"
 
   server: {
     host: "::",

@@ -29,12 +29,12 @@ const Deployment = () => {
               </p>
               <div className="bg-gray-900 p-3 rounded border border-gray-600">
                 <code className="text-green-400">
-                  https://yourusername.github.io/heloo/
+                  https://yourusername.github.io/pathfinder/
                 </code>
               </div>
               <Button 
                 className="w-full bg-blue-600 hover:bg-blue-700"
-                onClick={() => window.open('https://yourusername.github.io/heloo/', '_blank')}
+                onClick={() => window.open('https://yourusername.github.io/pathfinder/', '_blank')}
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 View Live Demo
@@ -56,13 +56,13 @@ const Deployment = () => {
               </p>
               <div className="bg-gray-900 p-3 rounded border border-gray-600">
                 <code className="text-green-400">
-                  https://github.com/yourusername/heloo
+                  https://github.com/yourusername/pathfinder
                 </code>
               </div>
               <Button 
                 variant="outline" 
                 className="w-full border-gray-600 text-white hover:bg-gray-700"
-                onClick={() => window.open('https://github.com/yourusername/heloo', '_blank')}
+                onClick={() => window.open('https://github.com/yourusername/pathfinder', '_blank')}
               >
                 <Github className="w-4 h-4 mr-2" />
                 View Repository
@@ -91,7 +91,7 @@ const Deployment = () => {
                   <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</span>
                   <div>
                     <strong className="text-white">Create Repository:</strong>
-                    <p>Name it "heloo" and let Lovable create the repository with your code.</p>
+                    <p>Name it "pathfinder" and let Lovable create the repository with your code.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
