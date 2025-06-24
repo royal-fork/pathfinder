@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { Grid } from './Grid';
 import { Controls } from './Controls';
@@ -8,9 +9,6 @@ import { aStar } from '../algorithms/aStar';
 import { bfs } from '../algorithms/bfs';
 import { dfs } from '../algorithms/dfs';
 import { generateMazeWithPrims } from '../algorithms/mazeGenerator';
-import { Button } from './ui/button';
-import { Rocket } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 
 const GRID_ROWS = 20;
 const GRID_COLS = 30;
@@ -27,8 +25,6 @@ export const PathfindingVisualizer: React.FC = () => {
   const [speed, setSpeed] = useState(50);
   const [isDrawing, setIsDrawing] = useState(false);
   const [drawMode, setDrawMode] = useState<'wall' | 'start' | 'end'>('wall');
-  
-  const navigate = useNavigate();
 
   const initializeGrid = useCallback(() => {
     const newGrid: Cell[][] = [];
@@ -197,18 +193,9 @@ export const PathfindingVisualizer: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Pathfinding Algorithm Visualizer
-          </h1>
-          <Button 
-            onClick={() => navigate('/deployment')}
-            className="bg-green-600 hover:bg-green-700"
-          >
-            <Rocket className="w-4 h-4 mr-2" />
-            Deploy Info
-          </Button>
-        </div>
+        <h1 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          Pathfinding Algorithm Visualizer
+        </h1>
         
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="lg:w-1/4 space-y-4">

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from './ui/button';
 import { Slider } from './ui/slider';
@@ -5,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 import { Label } from './ui/label';
 import { GridState } from '../types/pathfinding';
-import { Play, Square, Trash2, Grid3X3, MousePointer, Navigation, Target } from 'lucide-react';
+import { Play, Square, Trash2, Maze, MousePointer, Navigation, Target } from 'lucide-react';
 
 interface ControlsProps {
   onRunAlgorithm: () => void;
@@ -146,7 +147,7 @@ export const Controls: React.FC<ControlsProps> = ({
             disabled={isRunning}
             className="w-full bg-purple-600 hover:bg-purple-700"
           >
-            <Grid3X3 className="w-4 h-4 mr-2" />
+            <Maze className="w-4 h-4 mr-2" />
             Generate Maze
           </Button>
           
