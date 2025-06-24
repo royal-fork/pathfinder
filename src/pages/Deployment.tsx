@@ -2,8 +2,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Globe, Rocket } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Deployment = () => {
+  const navigate = useNavigate();
+  
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6">
       <div className="max-w-4xl mx-auto">
@@ -112,7 +115,7 @@ const Deployment = () => {
 
         <div className="mt-8 text-center">
           <Button 
-            onClick={() => window.location.href = '/'}
+            onClick={() => navigate('/')}
             className="bg-purple-600 hover:bg-purple-700"
           >
             Back to Pathfinding Visualizer

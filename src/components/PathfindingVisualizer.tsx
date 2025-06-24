@@ -10,6 +10,7 @@ import { dfs } from '../algorithms/dfs';
 import { generateMazeWithPrims } from '../algorithms/mazeGenerator';
 import { Button } from './ui/button';
 import { Rocket } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const GRID_ROWS = 20;
 const GRID_COLS = 30;
@@ -26,6 +27,8 @@ export const PathfindingVisualizer: React.FC = () => {
   const [speed, setSpeed] = useState(50);
   const [isDrawing, setIsDrawing] = useState(false);
   const [drawMode, setDrawMode] = useState<'wall' | 'start' | 'end'>('wall');
+  
+  const navigate = useNavigate();
 
   const initializeGrid = useCallback(() => {
     const newGrid: Cell[][] = [];
@@ -199,7 +202,7 @@ export const PathfindingVisualizer: React.FC = () => {
             Pathfinding Algorithm Visualizer
           </h1>
           <Button 
-            onClick={() => window.location.href = '/deployment'}
+            onClick={() => navigate('/deployment')}
             className="bg-green-600 hover:bg-green-700"
           >
             <Rocket className="w-4 h-4 mr-2" />
